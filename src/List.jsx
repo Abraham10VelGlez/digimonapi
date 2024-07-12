@@ -18,9 +18,13 @@ export default function List() {
             {Array.isArray(digimons) ? (
                 /*digimons.slice(0, 3).map((digimon, index) => (*/
                 digimons.map((digimon, index) => (
-                    <div key={index} className="col-12 md:col-6 lg:col-4">
-                        <div key={index} className="text-center p-2 border-round-lg bg-primary font-bold">
-                            <Card className="imgcardigimon" subTitle={'Digimon No. ' + digimon.id} title={digimon.name} header={(<Image src={digimon.image} indicatorIcon={icon} alt="Card" preview width="50" />)} ></Card>
+                    <div key={index} className="col-15 md:col-3 lg:col-2">
+                        <div key={index} className="text-center p-5 border-round-lg bg-primary " >
+                            {/*<Card className="imgcardigimon" subTitle={'Digimon No. ' + digimon.id} title={digimon.name} header={(<Image src={digimon.image} indicatorIcon={icon} alt="Image" width="100" height="100" preview  />)} ></Card>*/}
+                            
+                                <Image src={digimon.image} indicatorIcon={icon} alt="Image" width="100" height="100" preview />
+                            
+
                         </div>
                     </div>
 

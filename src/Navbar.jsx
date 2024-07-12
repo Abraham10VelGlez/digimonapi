@@ -11,6 +11,7 @@ import 'primeflex/primeflex.css'; // flex
 import { Dialog } from 'primereact/dialog';
 import { Terminal } from 'primereact/terminal';
 import List from './List';
+import Carusel from './Carusel';
 
 export default function Navbar() {
 
@@ -68,7 +69,7 @@ export default function Navbar() {
             <div className="dock_positionavg">
                 {/*<h1>Digimondex</h1>*/}
                 <div className="grid">
-                   <List></List>
+                   <Carusel></Carusel>
                 </div>
             </div>
             {/*<div className="flex flex-wrap gap-3 mb-5 dock_positionavg">
