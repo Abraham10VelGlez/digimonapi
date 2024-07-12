@@ -8,7 +8,7 @@ export default function Hook_list() {
   const [digimons, setdigimons] = useState([])
   useEffect(() => {
     const getDigimos = async () => {      
-      const result = await axios.get('https://digi-api.com/api/v1/digimon?page=99');
+      const result = await axios.get('https://digi-api.com/api/v1/digimon?page=34');
       //console.log(result.data.content);      
       setdigimons(result.data.content)
     }

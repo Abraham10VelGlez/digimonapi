@@ -14,22 +14,17 @@ export default function Carusel() {
     const [monster, setmonster] = useState([]);
     const responsiveOptions = [
         {
-            breakpoint: '1000px',
-            numVisible: 2,
-            numScroll: 2
-        },
-        {
-            breakpoint: '100px',
-            numVisible: 3,
+            breakpoint: '1199px',
+            numVisible: 1,
             numScroll: 1
         },
         {
-            breakpoint: '500px',
-            numVisible: 2,
+            breakpoint: '991px',
+            numVisible: 1,
             numScroll: 1
         },
         {
-            breakpoint: '300px',
+            breakpoint: '567px',
             numVisible: 1,
             numScroll: 1
         }
@@ -42,9 +37,9 @@ export default function Carusel() {
 
     const productTemplate = (monster) => {
         return (
-            <div className="custom-card border-round m-2 text-center py-2 px-1">
-                <div className="mb-3">
-                    <img src={monster.image} alt={monster.name} className="custom-image w-6 shadow-2" />
+            <div className="text-center">
+                <div className="mb-2">
+                    <img src={monster.image} alt={monster.name} className="custom-image w-4 h-3 shadow-8" />
                 </div>
                 <div>
                     <h4 className="mb-1 custom-name">{monster.name}</h4>
@@ -56,7 +51,7 @@ export default function Carusel() {
 
     return (
         <div className="card">
-            <Carousel    value={monster} numVisible={3} numScroll={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />
+            <Carousel value={monster} numVisible={1} numScroll={1} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />
         </div>
     );
 }
