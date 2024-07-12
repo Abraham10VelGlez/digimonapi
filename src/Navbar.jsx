@@ -65,11 +65,22 @@ export default function Navbar() {
 
     return (
         <div className="dock-demo">
-            <div className="flex flex-wrap gap-3 mb-5 dock_positionavg">
+            <div className="dock_positionavg">
                 {/*<h1>Digimondex</h1>*/}
                 <div className="grid">
-                    <List></List>
-                    
+
+                    <div className="col">
+                        <div className="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+                    </div>
+                    <div className="col">
+                        <div className="text-center p-3 border-round-sm bg-primary font-bold ">2</div>
+                    </div>
+                    <div className="col">
+                        <div className="text-center p-3 border-round-sm bg-primary font-bold ">3</div>
+                    </div>
+
+
+
                 </div>
 
             </div>
