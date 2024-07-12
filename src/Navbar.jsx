@@ -19,26 +19,26 @@ export default function Navbar() {
     const items = [
         {
             label: 'Terminal',
-            icon: () => <img alt="Finder" src="https://primefaces.org/cdn/primereact/images/dock/terminal.svg" width="100%" />,
+            icon: () => <img alt="Finder" src="https://primefaces.org/cdn/primereact/images/dock/terminal.svg" width="80%" />,
             command: () => {
                 setDisplayTerminal(true);
             }
         },
         {
             label: 'Finder',
-            icon: () => <img alt="Finder" src="https://primefaces.org/cdn/primereact/images/dock/finder.svg" width="100%" />,
+            icon: () => <img alt="Finder" src="https://primefaces.org/cdn/primereact/images/dock/finder.svg" width="80%" />,
         },
         {
             label: 'App Store',
-            icon: () => <img alt="App Store" src="https://primefaces.org/cdn/primereact/images/dock/appstore.svg" width="100%" />,
+            icon: () => <img alt="App Store" src="https://primefaces.org/cdn/primereact/images/dock/appstore.svg" width="80%" />,
         },
         {
             label: 'Photos',
-            icon: () => <img alt="Photos" src="https://primefaces.org/cdn/primereact/images/dock/photos.svg" width="100%" />,
+            icon: () => <img alt="Photos" src="https://primefaces.org/cdn/primereact/images/dock/photos.svg" width="80%" />,
         },
         {
             label: 'Trash',
-            icon: () => <img alt="trash" src="https://primefaces.org/cdn/primereact/images/dock/trash.png" width="100%" />,
+            icon: () => <img alt="trash" src="https://primefaces.org/cdn/primereact/images/dock/trash.png" width="80%" />,
         }
     ];
 
@@ -68,21 +68,8 @@ export default function Navbar() {
             <div className="dock_positionavg">
                 {/*<h1>Digimondex</h1>*/}
                 <div className="grid">
-
-                    <div className="col">
-                        <div className="text-center p-3 border-round-sm bg-primary font-bold">1</div>
-                    </div>
-                    <div className="col">
-                        <div className="text-center p-3 border-round-sm bg-primary font-bold ">2</div>
-                    </div>
-                    <div className="col">
-                        <div className="text-center p-3 border-round-sm bg-primary font-bold ">3</div>
-                    </div>
-
-
-
+                   <List></List>
                 </div>
-
             </div>
             {/*<div className="flex flex-wrap gap-3 mb-5 dock_positionavg">
                 {positions.map((option) => {
