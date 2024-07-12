@@ -14,22 +14,22 @@ export default function Carusel() {
     const [monster, setmonster] = useState([]);
     const responsiveOptions = [
         {
-            breakpoint: '1400px',
+            breakpoint: '1000px',
             numVisible: 2,
-            numScroll: 1
+            numScroll: 2
         },
         {
-            breakpoint: '1199px',
+            breakpoint: '100px',
             numVisible: 3,
             numScroll: 1
         },
         {
-            breakpoint: '767px',
+            breakpoint: '500px',
             numVisible: 2,
             numScroll: 1
         },
         {
-            breakpoint: '575px',
+            breakpoint: '300px',
             numVisible: 1,
             numScroll: 1
         }
@@ -44,7 +44,7 @@ export default function Carusel() {
 
     const productTemplate = (monster) => {
         return (
-            <div className="border-1 surface-border border-round m-2 text-center py-5 px-3">
+            <div className="border-round m-2 text-center py-2 px-1">
                 <div className="mb-3">
                     <img src={monster.image} alt={monster.name} className="w-6 shadow-2" />
                 </div>
