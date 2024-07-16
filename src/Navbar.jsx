@@ -83,7 +83,8 @@ export default function Navbar() {
             <div className="dock_positionavg">
                 {/*<h1>Digimondex</h1>*/}
                 
-                    <Cardx></Cardx>
+                <Cardx></Cardx>
+                <br></br>                
                
             </div>
             {/*<div className="flex flex-wrap gap-3 mb-5 dock_positionavg">
@@ -100,8 +101,7 @@ export default function Navbar() {
                     );
                 })}
             </div>*/}
-            <br></br>
-            <br></br>
+            
             <div className="dock-window" style={{ backgroundImage: 'url(https://primefaces.org/cdn/primereact/images/dock/window.jpg)' }}>
                 <Dock model={items} position={position} />
                 <Dialog visible={displayTerminal} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={false}>

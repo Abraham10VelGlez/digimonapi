@@ -17,7 +17,7 @@ export default function Cardx() {
 
 
     return (
-        <div className="grid" >
+        <div className="gridxavgajust grid " >
 
             {monster.slice(0,4).map((x, index) => (
                 <div key={index} className="col-6 md:col-3 lg:col-3"> 
