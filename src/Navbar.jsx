@@ -12,11 +12,18 @@ import { Dialog } from 'primereact/dialog';
 import { Terminal } from 'primereact/terminal';
 import List from './List';
 import Carusel from './Carusel';
+import Climax from './Climax';
+import Search from './Search';
+import Logo from './Logo';
+import Cardx from './Card_x';
 
 export default function Navbar() {
 
     const [position, setPosition] = useState('bottom');
     const [displayTerminal, setDisplayTerminal] = useState(false);
+    const [displayFinder, setDisplayFinder] = useState(false);
+    const [displaySearch, setDisplaySearch] = useState(false);
+
     const items = [
         {
             label: 'Terminal',
@@ -28,6 +35,9 @@ export default function Navbar() {
         {
             label: 'Finder',
             icon: () => <img alt="Finder" src="https://primefaces.org/cdn/primereact/images/dock/finder.svg" width="60%" />,
+            command: () => {
+                setDisplayFinder(true);
+            }
         },
         {
             label: 'App Store',
@@ -36,11 +46,14 @@ export default function Navbar() {
         {
             label: 'Photos',
             icon: () => <img alt="Photos" src="https://primefaces.org/cdn/primereact/images/dock/photos.svg" width="60%" />,
+            command: () => {
+                setDisplaySearch(true);
+            }
         },
-        {
+        /*{
             label: 'Trash',
             icon: () => <img alt="trash" src="https://primefaces.org/cdn/primereact/images/dock/trash.png" width="60%" />,
-        }
+        }*/
     ];
 
     const positions = [
@@ -66,11 +79,12 @@ export default function Navbar() {
 
     return (
         <div className="dock-demo">
+
             <div className="dock_positionavg">
                 {/*<h1>Digimondex</h1>*/}
-                <div className="grid">
-                   <Carusel></Carusel>
-                </div>
+                
+                    <Cardx></Cardx>
+               
             </div>
             {/*<div className="flex flex-wrap gap-3 mb-5 dock_positionavg">
                 {positions.map((option) => {
@@ -86,12 +100,20 @@ export default function Navbar() {
                     );
                 })}
             </div>*/}
-
-
+            <br></br>
+            <br></br>
             <div className="dock-window" style={{ backgroundImage: 'url(https://primefaces.org/cdn/primereact/images/dock/window.jpg)' }}>
                 <Dock model={items} position={position} />
                 <Dialog visible={displayTerminal} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={false}>
-                    <Terminal welcomeMessage="Welcome to PrimeReact Abraham (cmd: 'date', 'greet {0}', 'random' and 'clear')" prompt="primereact $" />
+                    <Terminal welcomeMessage="Welcome to PrimeReact by AbrahamVG (Hacking Digimon Terminal)" prompt="primereactavg $" />
+                </Dialog>
+                <Dialog visible={displayFinder} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw', height: '18rem' }} onHide={() => setDisplayFinder(false)} maximizable blockScroll={false}>
+                    <h2 className="text-center">Cambiando Tema de DigimonDex</h2>
+                    <Climax></Climax>
+                </Dialog>
+                <Dialog visible={displaySearch} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw', height: '18rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
+                    <h2 className="text-center">Buscar Digimon</h2>
+                    <Search></Search>
                 </Dialog>
             </div>
         </div>

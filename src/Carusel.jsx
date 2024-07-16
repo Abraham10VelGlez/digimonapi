@@ -38,12 +38,14 @@ export default function Carusel() {
     const productTemplate = (monster) => {
         return (
             <div className="text-center">
-                <div className="mb-2">
+                <div className="mb-1">
                     <img src={monster.image} alt={monster.name} className="custom-image w-4 h-3 shadow-8" />
+                    {/*<img src={monster.img} alt={monster.name} className="custom-image w-1 h-1 shadow-8" />*/}
+
                 </div>
                 <div>
-                    <h4 className="mb-1 custom-name">{monster.name}</h4>
-                    <h6 className="mt-0 mb-3 custom-price">${monster.name}</h6>
+                    <h4 className="mb-1 custom-name">Name: {monster.name}</h4>
+                    <h6 className="mt-0 mb-3 custom-price">Digimon No. {monster.id}</h6>
                 </div>
             </div>
         );
