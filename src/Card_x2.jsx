@@ -12,10 +12,12 @@ export default function Cardx2({  data }) {
 
     const header = (
         <Image  src={data.image} alt="Image" preview width="80"  />
+        //<Image  src={data.img} alt="Image" preview width="80"  />
     );
 
 
     return (
         <Card  title={data.name} subTitle={ 'Digimon No. ' + data.id} header={header} />
+        
     )
 }

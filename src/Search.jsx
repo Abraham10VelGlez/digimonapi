@@ -1,9 +1,11 @@
 
 import React, { useEffect, useState } from 'react';
 import { AutoComplete } from "primereact/autocomplete";
+import Hook_list from './Hook_list';
 
 
 export default function Search() {
+    const { search_avg } = Hook_list()
     const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [filteredCountries, setFilteredCountries] = useState(null);
@@ -273,11 +275,17 @@ export default function Search() {
 
     useEffect(() => {
         setCountries(dataxmonster);
+        search_avg(selectedCountry)
     }, []);
-
+    //console.log(selectedCountry);
+    
     return (
         <div className="card flex justify-content-center">
             <AutoComplete field="name" value={selectedCountry} suggestions={filteredCountries} completeMethod={search} onChange={(e) => setSelectedCountry(e.value)} />
+                {
+                    //selectedCountry ? selectedCountry.name : null
+                }
+                                
         </div>
     )
 }

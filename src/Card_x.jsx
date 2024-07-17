@@ -17,11 +17,12 @@ export default function Cardx() {
 
 
     return (
-        <div className="gridxavgajust grid " >
+        <div className="gridxavgajust grid" >
 
-            {monster.slice(0,4).map((x, index) => (
+            {
+            monster.slice(0,4).map((x, index) => (
                 <div key={index} className="col-6 md:col-3 lg:col-3"> 
-                    <div key={index} className="text-center p-3 border-round-sm bg-primary font-bold">
+                    <div key={index} className="text-center p-3 border-round-sm cardcolos font-bold">
                         <Cardx2 key={index} data={x} />
                     </div>
                 </div>

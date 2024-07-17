@@ -6,11 +6,14 @@ import axios from 'axios'
 
 export default function Hook_list() {
   const [digimons, setdigimons] = useState([])
+  const [digimonslist, setdigimonslist] = useState([])
   useEffect(() => {
-    const getDigimos = async () => {      
-      const result = await axios.get('https://digi-api.com/api/v1/digimon?page=100');
-      //const result = await axios.get('https://digi-api.com/api/v1/digimon?page=38');
-      
+    //total de digimon 1460
+
+    const getDigimos = async () => {
+      const result = await axios.get('https://digi-api.com/api/v1/digimon?page=45');
+      //const result = await axios.get('https://digimon-api.vercel.app/api/digimon');
+
       //console.log(result.data.content);      
       setdigimons(result.data.content)
 
@@ -18,11 +21,37 @@ export default function Hook_list() {
       //setdigimons(result.data)
 
     }
+    const getDigimosList = async () => {
+      const resultx = await axios.get('https://digi-api.com/api/v1/digimon');
+      //https://digi-api.com/api/v1/digimon?pageSize=10 paginacion x numero de 
+      //const result = await axios.get('https://digimon-api.vercel.app/api/digimon');
+
+      //console.log(result.data.content);      
+      setdigimonslist(resultx.data.content)
+
+      //console.log(result.data);      
+      //setdigimons(result.data)
+
+    }
     getDigimos()
+    getDigimosList()
   }, [])
 
+
+
+  const search_avg = async (x) => {
+    const result = await axios.get('https://digi-api.com/api/v1/digimon?name=' + x);    
+    //setdigimons(result.data.content)
+    console.log(result);
+
+  }
+
+
+
+
+
   return {
-    digimons
+    digimons, digimonslist,search_avg
 
   }
 
