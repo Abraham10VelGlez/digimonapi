@@ -16,6 +16,9 @@ import Climax from './Climax';
 import Search from './Search';
 import Logo from './Logo';
 import Cardx from './Card_x';
+import Cardselect from './Cardselect';
+import Cardall from './Cardall';
+
 
 export default function Navbar() {
 
@@ -23,6 +26,7 @@ export default function Navbar() {
     const [displayTerminal, setDisplayTerminal] = useState(false);
     const [displayFinder, setDisplayFinder] = useState(false);
     const [displaySearch, setDisplaySearch] = useState(false);
+    const [displayAll, setDisplayAll] = useState(false);
 
     const items = [
         {
@@ -36,19 +40,24 @@ export default function Navbar() {
             label: 'Finder',
             icon: () => <img alt="Finder" src="https://primefaces.org/cdn/primereact/images/dock/finder.svg" width="60%" />,
             command: () => {
-                setDisplayFinder(true);
+                setDisplaySearch(true);
             }
+            
         },
         {
             label: 'App Store',
             icon: () => <img alt="App Store" src="https://primefaces.org/cdn/primereact/images/dock/appstore.svg" width="60%" />,
+            command: () => {
+                setDisplayFinder(true);
+            }
         },
         {
             label: 'Photos',
             icon: () => <img alt="Photos" src="https://primefaces.org/cdn/primereact/images/dock/photos.svg" width="60%" />,
             command: () => {
-                setDisplaySearch(true);
+                setDisplayAll(true);
             }
+            
         },
         /*{
             label: 'Trash',
@@ -74,6 +83,8 @@ export default function Navbar() {
             value: 'right'
         }
     ];
+
+    
 
 
 
@@ -114,6 +125,10 @@ export default function Navbar() {
                 <Dialog visible={displaySearch} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw', height: '40rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
                     <h2 className="text-center">Buscar Digimon</h2>
                     <Search></Search>
+                </Dialog>
+                <Dialog visible={displayAll} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '50vw', height: '45rem' }} onHide={() => setDisplayAll(false)} maximizable blockScroll={false}>
+                    <h2 className="text-center">Digimon World</h2>
+                    <Cardall></Cardall>
                 </Dialog>
             </div>
         </div>

@@ -11,7 +11,7 @@ export default function Hook_list() {
     //total de digimon 1460
 
     const getDigimos = async () => {
-      const result = await axios.get('https://digi-api.com/api/v1/digimon?page=45');
+      const result = await axios.get('https://digi-api.com/api/v1/digimon?page=8');
       //const result = await axios.get('https://digimon-api.vercel.app/api/digimon');
 
       //console.log(result.data.content);      
