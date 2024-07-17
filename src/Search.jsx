@@ -2,13 +2,15 @@
 import React, { useEffect, useState } from 'react';
 import { AutoComplete } from "primereact/autocomplete";
 import Hook_list from './Hook_list';
-
+import Cardselect from './Cardselect';
 
 export default function Search() {
-    const { search_avg } = Hook_list()
+    const { digimonslist, search_avg } = Hook_list()
     const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [filteredCountries, setFilteredCountries] = useState(null);
+
+    const [digimonDetails, setdigimonDetails] = useState(null);
 
     const search = (event) => {
         // Timeout to emulate a network connection
@@ -28,7 +30,7 @@ export default function Search() {
         }, 250);
     }
 
-    const dataxmonster =   [
+    /*const dataxmonster = [
         { name: 'Afghanistan', code: 'AF' },
         { name: 'Albania', code: 'AL' },
         { name: 'Algeria', code: 'DZ' },
@@ -271,22 +273,56 @@ export default function Search() {
         { name: 'Yemen', code: 'YE' },
         { name: 'Zambia', code: 'ZM' },
         { name: 'Zimbabwe', code: 'ZW' }
-    ];
+    ];*/
+
+    const dataxmonster = digimonslist;
 
     useEffect(() => {
         setCountries(dataxmonster);
-        search_avg(selectedCountry)
-    }, []);
+
+
+        if (selectedCountry) {
+            const selected_digimon = countries.find(country => country.name === selectedCountry.name);
+            setdigimonDetails(selected_digimon);
+        }
+
+    }, [selectedCountry]);
     //console.log(selectedCountry);
-    
+
+
+
     return (
-        <div className="card flex justify-content-center">
-            <AutoComplete field="name" value={selectedCountry} suggestions={filteredCountries} completeMethod={search} onChange={(e) => setSelectedCountry(e.value)} />
-                {
-                    //selectedCountry ? selectedCountry.name : null
-                }
-                                
+        <div className="justify-content-center">
+
+            <div className="grid">
+                <div className="col-12 md:col-6 lg:col-12">
+                    <div className="text-center p-3 border-round-sm bg-primary font-bold">
+                        <AutoComplete field="name" value={selectedCountry} suggestions={filteredCountries} completeMethod={search} onChange={(e) => setSelectedCountry(e.value)} />
+                        {
+                            //selectedCountry ? selectedCountry.name : null
+                        }
+                    </div>
+                </div>
+
+            </div>
+            <br></br>
+            <div className="grid">
+
+                <div className="col-12 md:col-6 lg:col-12">
+                    <div className="text-center p-3 border-round-sm bg-primary font-bold">
+                        <Cardselect json={digimonDetails} ></Cardselect>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
         </div>
     )
 }
-        

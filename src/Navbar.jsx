@@ -111,7 +111,7 @@ export default function Navbar() {
                     <h2 className="text-center">Cambiando Tema de DigimonDex</h2>
                     <Climax></Climax>
                 </Dialog>
-                <Dialog visible={displaySearch} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw', height: '18rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
+                <Dialog visible={displaySearch} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw', height: '40rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
                     <h2 className="text-center">Buscar Digimon</h2>
                     <Search></Search>
                 </Dialog>

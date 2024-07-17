@@ -17,7 +17,7 @@ export default function Cardx() {
 
 
     return (
-        <div className="gridxavgajust grid" >
+        <div className="gridxavgajust" >
 
             {
             monster.slice(0,4).map((x, index) => (
