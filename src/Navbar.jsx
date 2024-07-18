@@ -92,9 +92,9 @@ export default function Navbar() {
         <div className="dock-demo">
 
             <div className="dock_positionavg">
-                {/*<h1>Digimondex</h1>*/}
+                {/*<h1>Digimondex</h1> <Cardx></Cardx>*/}
                 
-                <Cardx></Cardx>
+                
                 <br></br>                
                
             </div>

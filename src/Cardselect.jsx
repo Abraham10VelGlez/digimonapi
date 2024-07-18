@@ -7,11 +7,11 @@ export default function Cardselect({ json }) {
     //console.log(json);
     if (!json) return null;
     return (
-        <div>
+        <div className='cardcolos'>
             <h3>Digimon Filtrado</h3>
             <p><strong>Nombre: </strong> {json.name}</p>
-            <p><strong>Código:</strong>   <Image src={json.image} alt="Image" width="250" /> </p>
-            <p><strong>Cifrado del DigiWorld</strong> {json.href} </p>
+            <p><Image src={json.image} alt="Image" preview width="250" /> </p>
+            {/*<p><strong><a href={json.href}>Cifrado del DigiWorld</a></strong></p>*/}
         </div>
     );
 
