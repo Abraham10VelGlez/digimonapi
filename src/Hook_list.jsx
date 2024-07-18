@@ -22,7 +22,7 @@ export default function Hook_list() {
 
     }
     const getDigimosListAll = async () => {
-      const resultx = await axios.get('https://digi-api.com/api/v1/digimon?pageSize=1460');
+      const resultx = await axios.get('https://digi-api.com/api/v1/digimon?pageSize=12');
       //https://digi-api.com/api/v1/digimon?pageSize=10 paginacion x numero de 
       //const result = await axios.get('https://digimon-api.vercel.app/api/digimon');
 

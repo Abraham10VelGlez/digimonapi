@@ -32,8 +32,8 @@ export default function Cardall() {
 
 
     return (
-        <div className="gridxavgajust" >
-
+        <div className="gridxavgajust grid " >
+        
             {loading ? (
                 Array.from({ length: 1460 }).map((_, index) => (
                     <CardSkeleton key={index} />
@@ -48,6 +48,23 @@ export default function Cardall() {
                     </div>
                 ))
             )}
+
+
+
+            {/*loading ? (
+                Array.from({ length: 1460 }).map((_, index) => (
+                    <CardSkeleton key={index} />
+                ))
+            ) : (
+                //monster.slice(0,4).map((x, index) => (
+                monster.map((x, index) => (
+                    <div key={index} className="col-6 md:col-3 lg:col-3">
+                        <div key={index} className="text-center p-3 border-round-sm cardcolos font-bold">
+                            <Cardx2 key={index} data={x} />
+                        </div>
+                    </div>
+                ))
+            )*/}
 
             {/*
                 //monster.slice(0,4).map((x, index) => (

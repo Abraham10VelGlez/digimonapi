@@ -115,18 +115,18 @@ export default function Navbar() {
             
             <div className="dock-window" style={{ backgroundImage: 'url(https://primefaces.org/cdn/primereact/images/dock/window.jpg)' }}>
                 <Dock model={items} position={position} />
-                <Dialog visible={displayTerminal} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={false}>
+                <Dialog visible={displayTerminal} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '20vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={false}>
                     <Terminal welcomeMessage="Welcome to PrimeReact by AbrahamVG (Hacking Digimon Terminal)" prompt="primereactavg $" />
                 </Dialog>
-                <Dialog visible={displayFinder} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw', height: '18rem' }} onHide={() => setDisplayFinder(false)} maximizable blockScroll={false}>
+                <Dialog visible={displayFinder} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '18vw', height: '18rem' }} onHide={() => setDisplayFinder(false)} >
                     <h2 className="text-center">Cambiando Tema de DigimonDex</h2>
                     <Climax></Climax>
                 </Dialog>
-                <Dialog visible={displaySearch} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw', height: '40rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
+                <Dialog visible={displaySearch} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '25vw', height: '35rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
                     <h2 className="text-center">Buscar Digimon</h2>
                     <Search></Search>
                 </Dialog>
-                <Dialog visible={displayAll} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '50vw', height: '45rem' }} onHide={() => setDisplayAll(false)} maximizable blockScroll={false}>
+                <Dialog visible={displayAll} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '50vw', height: '45rem' }} onHide={() => setDisplayAll(false)} maximizable blockScroll={true}>
                     <h2 className="text-center">Digimon World</h2>
                     <Cardall></Cardall>
                 </Dialog>

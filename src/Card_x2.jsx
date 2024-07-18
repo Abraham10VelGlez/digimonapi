@@ -11,7 +11,7 @@ export default function Cardx2({  data }) {
 
 
     const header = (
-        <Image  src={data.image} alt="Image" preview width="80"  />
+        <Image  src={data.image} alt="Image" preview width="150" height='150'  />
         //<Image  src={data.img} alt="Image" preview width="80"  />
     );
 
