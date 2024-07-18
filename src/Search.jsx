@@ -305,7 +305,7 @@ export default function Search() {
                 </div>
 
             </div>
-            <br></br>
+            
             <div className="grid">
 
                 <div className="col-12 md:col-6 lg:col-12">

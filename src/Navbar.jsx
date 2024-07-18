@@ -126,7 +126,7 @@ export default function Navbar() {
                     <h2 className="text-center">Buscar Digimon</h2>
                     <Search></Search>
                 </Dialog>
-                <Dialog visible={displayAll} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '50vw', height: '45rem' }} onHide={() => setDisplayAll(false)} maximizable blockScroll={true}>
+                <Dialog visible={displayAll} breakpoints={{ '960px': '10vw', '600px': '75vw' }} style={{ width: '50vw', height: '45rem' }} onHide={() => setDisplayAll(false)} maximizable blockScroll={true}>
                     <h2 className="text-center">Digimon World</h2>
                     <Cardall></Cardall>
                 </Dialog>

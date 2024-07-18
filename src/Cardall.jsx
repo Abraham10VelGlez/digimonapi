@@ -9,18 +9,18 @@ import { Skeleton } from 'primereact/skeleton'; // Si estás usando PrimeReact p
 
 export default function Cardall() {
 
-    const { digimonslist } = Hook_list();
+    const { digimonspages } = Hook_list();
     const [monster, setmonster] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        //setmonster(digimonslist);
-        if (digimonslist.length > 0) {
-            setmonster(digimonslist);
+        //setmonster(digimonspages);
+        if (digimonspages.length > 0) {
+            setmonster(digimonspages);
             setLoading(false);
         }
         //console.log(digimons);
-    }, [digimonslist]);
+    }, [digimonspages]);
 
     const CardSkeleton = () => (
         <div className="col-6 md:col-3 lg:col-3">
