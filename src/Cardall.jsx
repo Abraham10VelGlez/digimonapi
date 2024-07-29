@@ -5,11 +5,12 @@ import { Button } from 'primereact/button';
 import Hook_list from './Hook_list';
 import Cardx2 from './Card_x2';
 import { Skeleton } from 'primereact/skeleton'; // Si estás usando PrimeReact para el Skeleton
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 
 export default function Cardall() {
 
-    const { digimonspages } = Hook_list();
+    const { digimonspages, masDigimons, moredigi } = Hook_list();
     const [monster, setmonster] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -33,21 +34,23 @@ export default function Cardall() {
 
     return (
         <div className="gridxavgajust grid " >
-        
-            {loading ? (
-                Array.from({ length: 1460 }).map((_, index) => (
-                    <CardSkeleton key={index} />
-                ))
-            ) : (
-                //monster.slice(0,4).map((x, index) => (
-                monster.map((x, index) => (
-                    <div key={index} className="col-6 md:col-3 lg:col-3">
-                        <div key={index} className="text-center p-3 border-round-sm cardcolos font-bold">
-                            <Cardx2 key={index} data={x} />
-                        </div>
-                    </div>
-                ))
-            )}
+
+            <InfiniteScroll
+                dataLength={monster.length}
+                next={masDigimons}
+                hasMore={moredigi}
+                loader={<h4>cargando</h4>}
+                endMessage={<h1>ya no hay digimon</h1>}
+            >
+                {
+                    monster.map((x, index) => (<Cardx2 key={index} data={x} />))
+                }
+            </InfiniteScroll>
+
+            {/*<Button onClick={masDigimons} label="Submit" icon="pi pi-check" />*/}
+
+
+
 
 
 

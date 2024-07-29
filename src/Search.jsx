@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { AutoComplete } from "primereact/autocomplete";
 import Hook_list from './Hook_list';
 import Cardselect from './Cardselect';
+import { Card } from 'primereact/card';
 
 export default function Search() {
     const { digimonslist, search_avg } = Hook_list()
@@ -299,18 +300,21 @@ export default function Search() {
                     <div className="text-center p-3 border-round-sm font-bold">
                         <AutoComplete field="name" value={selectedCountry} suggestions={filteredCountries} completeMethod={search} onChange={(e) => setSelectedCountry(e.value)} />
                         {
-                            //selectedCountry ? selectedCountry.name : null
+                            // selectedCountry ? selectedCountry.name : null
                         }
                     </div>
                 </div>
 
             </div>
-            
+
             <div className="grid">
 
                 <div className="col-12 md:col-6 lg:col-12">
                     <div className="text-center p-3 border-round-sm  font-bold">
-                        <Cardselect json={digimonDetails} ></Cardselect>
+                        <div className="card">
+                            <Cardselect json={digimonDetails} ></Cardselect>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -323,6 +327,6 @@ export default function Search() {
 
 
 
-        </div>
+        </div >
     )
 }
