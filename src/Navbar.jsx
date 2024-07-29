@@ -95,6 +95,7 @@ export default function Navbar() {
                 {/*<h1>Digimondex</h1> <Cardx></Cardx>*/}
                 
                 
+                
                 <br></br>                
                
             </div>

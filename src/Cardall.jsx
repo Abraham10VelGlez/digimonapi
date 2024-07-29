@@ -35,19 +35,26 @@ export default function Cardall() {
     return (
         <div className="gridxavgajust grid " >
 
-            <InfiniteScroll
-                dataLength={monster.length}
-                next={masDigimons}
-                hasMore={moredigi}
-                loader={<h4>cargando</h4>}
-                endMessage={<h1>ya no hay digimon</h1>}
-            >
-                {
-                    monster.map((x, index) => (<Cardx2 key={index} data={x} />))
-                }
-            </InfiniteScroll>
+         
+                {loading ? (
+                    Array.from({ length: 12 }).map((_, index) => (
+                        <CardSkeleton key={index} />
+                    ))
+                ) : (
+                    //monster.slice(0,4).map((x, index) => (
+                    monster.map((x, index) => (
+                        <div key={index} className="col-6 md:col-3 lg:col-3">
+                            <div key={index} className="text-center p-3 border-round-sm cardcolos font-bold">
+                                <Cardx2 key={index} data={x} />
+                            </div>
+                        </div>
+                    ))
+                )}
+            
 
-            {/*<Button onClick={masDigimons} label="Submit" icon="pi pi-check" />*/}
+
+
+            <Button onClick={masDigimons} label="Submit" icon="pi pi-check" />
 
 
 

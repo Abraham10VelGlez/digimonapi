@@ -32,16 +32,19 @@ export default function Hook_list() {
   }
 
   const obtenerDigimons = async () => {
+
     const { resultx } = await getDigimosListpageSize()
     setdigimonspages(resultx.data.content)
     seturl(resultx.data.pageable.nextPage)
 
+
   }
 
   const masDigimons = async () => {
-    const { resultx } = await getDigimosListpageSize(siguienteurl)
+    console.log("activacion de mas digimon");
+    const { resultx } = await getDigimosListpageSize(siguienteurl)    
     setdigimonspages(prev => [...prev, ...resultx.data.content]) //leer el estado previo
-    resultx.data.pageable.nextPage === null && setmoredigi(false)
+    resultx.data.pageable.nextPage == null && setmoredigi(false)
     seturl(resultx.data.pageable.nextPage)
 
   }
@@ -98,7 +101,7 @@ export default function Hook_list() {
 
 
   return {
-    digimons, digimonslist, search_avg, digimonspages, masDigimons,moredigi
+    digimons, digimonslist, search_avg, digimonspages, masDigimons, moredigi
 
   }
 
