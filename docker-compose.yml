@@ -11,3 +11,8 @@ services:
     ports:
       - "5173:5173"
     command: [ "yarn", "dev" ]
+
+#ESTE ARCHIVO ES PARA USO DE LA APLICACION LOCAL EN DOCKER.COMPOSE USANDO LOS COMANDOS DE :
+#COMANDO PARA EJECUTAR DOCKER.COMPOSE.YML
+#docker-compose up --build
+#

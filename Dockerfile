@@ -18,3 +18,9 @@ EXPOSE 5173
 CMD ["yarn", "dev"]
 
 
+#COMANDOS PARA EJECUTAR DOCKERFILE
+#COMANDO 1
+# docker build -t nodedigimon .
+#COMANDO 2
+#docker run -it -p 3000:5173 nodedigimon
+
