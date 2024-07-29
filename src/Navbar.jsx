@@ -59,10 +59,10 @@ export default function Navbar() {
             }
             
         },
-        {
+        /*{
             label: 'Trash',
             icon: () => <img alt="trash" src="https://primefaces.org/cdn/primereact/images/dock/trash.png" width="60%" />,
-        }
+        }*/
     ];
 
     const positions = [
