@@ -63,7 +63,8 @@ export default function Navbar() {
             label: 'Photos',
             icon: () => <img alt="Photos" src="https://primefaces.org/cdn/primereact/images/dock/photos.svg" width="60%" />,
             command: () => {
-                window.open('/digimonsavg', '_blank')
+                //window.open('/digimonsavg', '_blank')
+                window.location.href = '/digimonsavg';
                 //setDisplayAll(true);
             }
 
