@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import axios from 'axios'
-const URL_DEFAULT_DIGIMON = 'https://digi-api.com/api/v1/digimon?page=0&pageSize=12'
+const URL_DEFAULT_DIGIMON = 'https://digi-api.com/api/v1/digimon?page=0&pageSize=20'
 
 export default function Hook_list() {
   const [digimons, setdigimons] = useState([])

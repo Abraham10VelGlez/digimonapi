@@ -34,35 +34,42 @@ export default function Cardall() {
 
     return (
         <div className="gridxavgajust grid " >
-            <div className="col-6 md:col-3 lg:col-3">
-                <div className="text-center p-3 border-round-sm cardcolos font-bold">
-                    <InfiniteScroll
-                        dataLength={monster.length} //This is important field to render the next data
-                        next={masDigimons}
-                        hasMore={true}
-                        loader={<h4>Loading...</h4>}
-                        endMessage={
-                            <p style={{ textAlign: 'center' }}>
-                                <b>Yay! You have seen it all</b>
-                            </p>
-                        }
-                    >
-                        {loading ? (
-                            Array.from({ length: 12 }).map((_, index) => (
-                                <CardSkeleton key={index} />
-                            ))
-                        ) : (
-                            //monster.slice(0,4).map((x, index) => (
-                            monster.map((x, index) => (
 
+
+            <InfiniteScroll
+                dataLength={monster.length} //This is important field to render the next data
+                next={masDigimons}
+                hasMore={true}
+                loader={<h4>Loading...</h4>}
+                endMessage={
+                    <p style={{ textAlign: 'center' }}>
+                        <b>Yay! You have seen it all</b>
+                    </p>
+                }
+                className="gridxavgajust grid "
+            >
+                {loading ? (
+                    Array.from({ length: 12 }).map((_, index) => (
+                        <CardSkeleton key={index} />
+                    ))
+                ) : (
+                    //monster.slice(0,4).map((x, index) => (
+                    monster.map((x, index) => (
+                        <div class="col-12 md:col-6 lg:col-3">
+                            <div class="text-center p-3 border-round-sm font-bold">
                                 <Cardx2 key={index} data={x} />
+                            </div>
+                        </div>
 
-                            ))
-                        )}
+                    ))
+                )}
+            </InfiniteScroll>
 
-                    </InfiniteScroll>
-                </div>
-            </div>
+
+
+
+
+
 
 
 
@@ -103,6 +110,6 @@ export default function Cardall() {
                 ))
             */}
 
-        </div>
+        </div >
     )
 }

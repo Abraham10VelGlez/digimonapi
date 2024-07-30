@@ -9,7 +9,7 @@ export default function Menu() {
     return (
         /*<Router>*/
         <Routes>
-            <Route path="/" index element={<Navbar/>} />
+            <Route path="/" index element={<Navbar />} />
             <Route path="/me" element={<About />} />
             <Route path="/Acercade" element={<About />} />
             {/* comodin para dar por defecto la pagina que no sirve */}
@@ -19,7 +19,7 @@ export default function Menu() {
     );
 }
 
-function Boxes(){
+function Boxes() {
     return <>asd</>
 }
 
@@ -45,10 +45,7 @@ function Home() {
 function About() {
     return (
         <>
-            <p>ACERCA DE</p>
-            <ul>
-                PAGINAS PROTEGIDAS VERSION NATIVA QUE DETALLE
-            </ul>
+
             <Cardall></Cardall>
 
         </>);

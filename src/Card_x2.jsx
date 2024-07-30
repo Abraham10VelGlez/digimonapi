@@ -7,6 +7,7 @@ import { Image } from 'primereact/image';
 
 
 
+
 export default function Cardx2({ data }) {
 
 
@@ -17,11 +18,10 @@ export default function Cardx2({ data }) {
 
 
     return (
-        <div className="col-12 md:col-12 lg:col-3">
-            <div className="text-center p-3  cardcolos">
-                <Card title={data.name} subTitle={'Digimon No. ' + data.id} header={header} />
-            </div>
-        </div>
+       
+            <Card title={data.name} subTitle={'Digimon No. ' + data.id} header={header} />
+       
+
 
     )
 }
