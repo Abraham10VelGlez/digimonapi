@@ -11,7 +11,7 @@ export default function Menu() {
         <Routes>
             <Route path="/" index element={<Navbar />} />
             <Route path="/me" element={<About />} />
-            <Route path="/Acercade" element={<About />} />
+            <Route path="/digimonsavg" element={<About />} />
             {/* comodin para dar por defecto la pagina que no sirve */}
             <Route path="*" element={<NotFound />} />
         </Routes>
@@ -44,11 +44,11 @@ function Home() {
 
 function About() {
     return (
-        <>
+        <div className="list_digimoonsavg" >
 
             <Cardall></Cardall>
 
-        </>);
+        </div>);
 }
 
 

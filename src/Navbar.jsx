@@ -18,6 +18,7 @@ import Logo from './Logo';
 import Cardx from './Card_x';
 import Cardselect from './Cardselect';
 import Cardall from './Cardall';
+import Logodigimon from './Logodigimon';
 
 
 export default function Navbar() {
@@ -99,6 +100,7 @@ export default function Navbar() {
             <div className="dock_positionavg">
                 {/*<h1>Digimondex</h1> <Cardx></Cardx>*/}
                 
+                <Logodigimon></Logodigimon>
                 
                 
                 <br></br>                

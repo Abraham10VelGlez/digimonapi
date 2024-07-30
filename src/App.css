@@ -43,7 +43,7 @@ html {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url('https://primefaces.org/cdn/primereact/images/dock/window.jpg');  
+  background-image: url('https://primefaces.org/cdn/primereact/images/dock/window.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -58,14 +58,14 @@ html {
 }
 
 .dock_positionavg {
-  z-index:4;
+  z-index: 4;
 }
 
 
 
-.cardcolos{
+.cardcolos {
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);  
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 
@@ -82,4 +82,152 @@ span.flag {
 .imgcardigimon {
   width: 14rem;
   font-size: 8px;
+}
+
+
+.list_digimoonsavg {
+
+  /*background-color:  #d474f7bd;*/
+  background-image: url(https://primefaces.org/cdn/primereact/images/dock/window.jpg);
+
+}
+
+.st0 {
+  fill: #66AF4C;
+}
+
+.st1 {
+  fill: #5D9D68;
+}
+
+.st2 {
+  fill: #52868A;
+}
+
+.st3 {
+  fill: #4874A6;
+}
+
+.st4 {
+  fill: #8CB13F;
+}
+
+.st5 {
+  fill: #849857;
+}
+
+.st6 {
+  fill: #7A7C73;
+}
+
+.st7 {
+  fill: #72638A;
+}
+
+.st8 {
+  fill: #BAB230;
+}
+
+.st9 {
+  fill: #B39442;
+}
+
+.st10 {
+  fill: #AB6F57;
+}
+
+.st11 {
+  fill: #A45069;
+}
+
+.st12 {
+  fill: #E0B423;
+}
+
+.st13 {
+  fill: #DA9031;
+}
+
+.st14 {
+  fill: #D36541;
+}
+
+.st15 {
+  fill: #CD404E;
+}
+
+.st16 {
+  fill: #FFFFFF;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.svg-container {
+  position: relative;
+}
+
+.imgsize{
+  width: 50%;
+}
+
+.centered-image {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 195%;
+  z-index: 1;
+}
+
+.m-logo {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  min-width: 100px;
+  height: auto;
+  margin: 0vh auto 0;
+}
+
+.box {
+  opacity: 0;
+  animation: wavey 5s ease alternate infinite;
+}
+
+.box.wave2 {
+  animation-delay: 0.1s;
+}
+
+.box.wave3 {
+  animation-delay: 0.3s;
+}
+
+.box.wave4 {
+  animation-delay: 0.5s;
+}
+
+.box.wave5 {
+  animation-delay: 0.7s;
+}
+
+.box.wave6 {
+  animation-delay: 0.9s;
+}
+
+.box.wave7 {
+  animation-delay: 1.1s;
+}
+
+@keyframes wavey {
+  90% {
+    opacity: 1.2;
+  }
+
+  100% {
+    opacity: .5;
+  }
 }
