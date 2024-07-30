@@ -55,8 +55,8 @@ export default function Cardall() {
                 ) : (
                     //monster.slice(0,4).map((x, index) => (
                     monster.map((x, index) => (
-                        <div class="col-12 md:col-6 lg:col-3">
-                            <div class="text-center p-3 border-round-sm font-bold">
+                        <div key={index} className="col-6 md:col-3 lg:col-3">
+                            <div key={index} className="text-center p-3 border-round-sm cardcolos font-bold">
                                 <Cardx2 key={index} data={x} />
                             </div>
                         </div>
