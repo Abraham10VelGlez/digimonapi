@@ -119,11 +119,11 @@ export default function Navbar() {
                 <Dialog visible={displayTerminal} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '20vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={false}>
                     <Terminal welcomeMessage="Welcome to PrimeReact by AbrahamVG (Hacking Digimon Terminal)" prompt="primereactavg $" />
                 </Dialog>
-                <Dialog visible={displayFinder} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '18vw', height: '18rem' }} onHide={() => setDisplayFinder(false)} >
+                <Dialog visible={displayFinder} breakpoints={{ '960px': 'auto', '600px': '75vw' }} style={{ width: '18vw', height: '18rem' }} onHide={() => setDisplayFinder(false)} >
                     <h2 className="text-center">Cambiando Tema de DigimonDex</h2>
                     <Climax></Climax>
                 </Dialog>
-                <Dialog visible={displaySearch} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '25vw', height: '35rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
+                <Dialog visible={displaySearch} breakpoints={{ '960px': 'auto', '600px': '75vw' }} style={{ width: '25vw', height: '35rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
                     <h2 className="text-center">Buscar Digimon</h2>
                     <Search></Search>
                 </Dialog>

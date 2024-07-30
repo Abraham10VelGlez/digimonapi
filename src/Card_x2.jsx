@@ -7,17 +7,21 @@ import { Image } from 'primereact/image';
 
 
 
-export default function Cardx2({  data }) {
+export default function Cardx2({ data }) {
 
 
     const header = (
-        <Image  src={data.image} alt="Image" preview width="150" height='150'  />
+        <Image src={data.image} alt="Image" preview width="150" height='150' />
         //<Image  src={data.img} alt="Image" preview width="80"  />
     );
 
 
     return (
-        <Card  title={data.name} subTitle={ 'Digimon No. ' + data.id} header={header} />
-        
+        <div className="col-12 md:col-12 lg:col-3">
+            <div className="text-center p-3  cardcolos">
+                <Card title={data.name} subTitle={'Digimon No. ' + data.id} header={header} />
+            </div>
+        </div>
+
     )
 }
