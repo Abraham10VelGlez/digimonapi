@@ -19,6 +19,8 @@ import Cardx from './Card_x';
 import Cardselect from './Cardselect';
 import Cardall from './Cardall';
 import Logodigimon from './Logodigimon';
+import { Button } from 'primereact/button';
+
 
 
 export default function Navbar() {
@@ -39,7 +41,7 @@ export default function Navbar() {
             command: () => {
                 setDisplayTerminal_window(true);
                 setDisplayTerminal(true);
-                
+
             }
         },
         {
@@ -48,7 +50,7 @@ export default function Navbar() {
             command: () => {
                 setDisplaySearch(true);
             }
-            
+
         },
         {
             label: 'App Store',
@@ -61,9 +63,10 @@ export default function Navbar() {
             label: 'Photos',
             icon: () => <img alt="Photos" src="https://primefaces.org/cdn/primereact/images/dock/photos.svg" width="60%" />,
             command: () => {
-                setDisplayAll(true);
+                window.open('/digimonsavg', '_blank')
+                //setDisplayAll(true);
             }
-            
+
         },
         /*{
             label: 'Trash',
@@ -90,7 +93,7 @@ export default function Navbar() {
         }
     ];
 
-    
+
 
 
 
@@ -99,12 +102,12 @@ export default function Navbar() {
 
             <div className="dock_positionavg">
                 {/*<h1>Digimondex</h1> <Cardx></Cardx>*/}
-                
+
                 <Logodigimon></Logodigimon>
-                
-                
-                <br></br>                
-               
+
+
+                <br></br>
+
             </div>
             {/*<div className="flex flex-wrap gap-3 mb-5 dock_positionavg">
                 {positions.map((option) => {
@@ -120,10 +123,10 @@ export default function Navbar() {
                     );
                 })}
             </div>*/}
-            
+
             <div className="dock-window" style={{ backgroundImage: 'url(https://primefaces.org/cdn/primereact/images/dock/window.jpg)' }}>
                 <Dock model={items} position={position} />
-                <Dialog visible={displayTerminal}  breakpoints={{ 'auto': 'auto', '600px': '25vw' }} style={{ width: '20vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={displayTerminal_window}>
+                <Dialog visible={displayTerminal} breakpoints={{ 'auto': 'auto', '600px': '25vw' }} style={{ width: '20vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={displayTerminal_window}>
                     <Terminal welcomeMessage="Welcome to PrimeReact by AbrahamVG (Hacking Digimon Terminal)" prompt="primereactavg $" />
                 </Dialog>
                 <Dialog visible={displayFinder} breakpoints={{ '960px': 'auto', '600px': '75vw' }} style={{ width: '18vw', height: '18rem' }} onHide={() => setDisplayFinder(false)} >
@@ -134,8 +137,11 @@ export default function Navbar() {
                     <h2 className="text-center">Buscar Digimon</h2>
                     <Search></Search>
                 </Dialog>
-                <Dialog visible={displayAll} breakpoints={{ '960px': '10vw', '600px': '75vw' }} style={{ width: '50vw' }} onHide={() => setDisplayAll(false)} maximizable blockScroll={true}>
-                    <h2 className="text-center">Digimon World</h2>
+                <Dialog visible={displayAll} breakpoints={{ '960px': 'auto', '600px': '75vw' }} style={{ width: '50vw' }} onHide={() => setDisplayAll(false)} maximizable blockScroll={true}>
+                <h2 className="text-center">Digimon World</h2>                    
+                    <a href="/digimonsavg" target="_blank" rel="noopener noreferrer" className="p-button font-bold" >
+                    VER TODO EL CATALOGO ENTERO
+                    </a>
                     <Cardall></Cardall>
                 </Dialog>
             </div>

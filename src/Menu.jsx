@@ -10,8 +10,8 @@ export default function Menu() {
         /*<Router>*/
         <Routes>
             <Route path="/" index element={<Navbar />} />
-            <Route path="/me" element={<About />} />
-            <Route path="/digimonsavg" element={<About />} />
+            <Route path="/me" element={<Viewall />} />
+            <Route path="/digimonsavg" element={<Viewall />} />
             {/* comodin para dar por defecto la pagina que no sirve */}
             <Route path="*" element={<NotFound />} />
         </Routes>
@@ -42,10 +42,10 @@ function Home() {
         </>);
 }
 
-function About() {
+function Viewall() {
     return (
         <div className="list_digimoonsavg" >
-
+            <h2 className="text-center">Digimon World</h2>
             <Cardall></Cardall>
 
         </div>);
