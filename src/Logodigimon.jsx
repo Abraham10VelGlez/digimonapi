@@ -8,9 +8,11 @@ export default function Logodigimon() {
         <>
 
 
+
             <div className="card flex justify-content-center align-items-center">
                 <div className="svg-container">
-                    <Image src="bp-removebg-preview.png" alt="Image" className="centered-image imgsize" />
+                    <Image src="pb-removebg-preview.png" alt="Image" className="centered-image" width="150" height="125" />
+
                     <svg className="m-logo" shapeRendering="crispEdges" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
                         <rect className="box wave1 st0" width="50" height="50" />
                         <rect x="50" className="box wave2 st1" width="50" height="50" />

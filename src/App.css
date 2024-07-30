@@ -177,10 +177,10 @@ span.flag {
 
 .centered-image {
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 50%;
+  left: 25%;
   transform: translate(-50%, -50%);
-  width: 195%;
+  width: 0%;
   z-index: 1;
 }
 
