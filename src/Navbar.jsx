@@ -35,7 +35,7 @@ export default function Navbar() {
     const [displayAll, setDisplayAll] = useState(false);
 
     const items = [
-        {
+        /*{
             label: 'Terminal',
             icon: () => <img alt="Terminal" src="https://primefaces.org/cdn/primereact/images/dock/terminal.svg" width="60%" />,
             command: () => {
@@ -43,7 +43,7 @@ export default function Navbar() {
                 setDisplayTerminal(true);
 
             }
-        },
+        },*/
         {
             label: 'Finder',
             icon: () => <img alt="Finder" src="https://primefaces.org/cdn/primereact/images/dock/finder.svg" width="60%" />,
@@ -95,6 +95,8 @@ export default function Navbar() {
     ];
 
 
+    const [themeChecked, setThemeChecked] = useState(false);
+
 
 
 
@@ -127,12 +129,14 @@ export default function Navbar() {
 
             <div className="dock-window" >
                 <Dock model={items} position={position} />
-                <Dialog visible={displayTerminal} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={false}>
+                {/*<Dialog visible={displayTerminal} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={false}>
                     <Terminal prompt="primereact $" />
-                </Dialog>
+                </Dialog>*/}
                 <Dialog visible={displayFinder} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '18vw', height: '18rem' }} onHide={() => setDisplayFinder(false)} >
                     <h2 className="text-center">Cambiando Tema de DigimonDex</h2>
-                    <Climax></Climax>
+                    <Climax
+                        checked={themeChecked}
+                        onChange={setThemeChecked} ></Climax>
                 </Dialog>
                 <Dialog visible={displaySearch} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '20vw', height: '40rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
                     <h2 className="text-center">Buscar Digimon</h2>
