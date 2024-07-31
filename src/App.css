@@ -2,15 +2,43 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+body {
+  /*transition: background-color 0.5s ease, color 0.5s ease, opacity 0.5s ease;*/
+  /*transition: background-color 2s ease, color 2s ease, opacity 2s ease;*/
+  transition: background-image 2s ease, opacity 2s ease;
+
+}
 
 body.day-mode {
-  background-color: white;
+  /*background-color: rgb(24, 255, 216);*/
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./day.jpg');
+  background-position: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
   color: black;
+  opacity: 1;
 }
 
 body.night-mode {
-  background-color: black;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./night.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   color: white;
+  opacity: 1;
 }
 
 
@@ -44,6 +72,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  /*background-color: rgb(24, 255, 216);*/
   /*background-image: url('https://primefaces.org/cdn/primereact/images/dock/window.jpg');*/
   background-repeat: no-repeat;
   background-size: cover;
@@ -183,7 +212,7 @@ span.flag {
   position: relative;
 }
 
-.imgsize{
+.imgsize {
   width: 50%;
 }
 

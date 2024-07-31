@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { Dock } from 'primereact/dock';
@@ -96,6 +96,10 @@ export default function Navbar() {
 
 
     const [themeChecked, setThemeChecked] = useState(false);
+    useEffect(() => {
+        // Cambiar la clase del body según el estado del botón
+        document.body.className = themeChecked  ? 'night-mode' : 'day-mode';
+    }, [themeChecked]);
 
 
 

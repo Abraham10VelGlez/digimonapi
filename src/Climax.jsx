@@ -5,10 +5,7 @@ export default function Climax({ checked, onChange }) {
     //const [checked, setChecked] = useState(false);
     //console.log(checked);
 
-    useEffect(() => {
-        // Cambiar la clase del body según el estado del botón
-        document.body.className = checked ? 'night-mode' : 'day-mode';
-    }, [checked]);
+   
 
     return (
         <div className="card flex justify-content-center">
