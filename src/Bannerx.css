@@ -1,4 +1,10 @@
-html,
+.list_digimoonsavg {
+
+  background-color:  #000000fa;
+  /*background-image: url(https://primefaces.org/cdn/primereact/images/dock/window.jpg);*/
+
+}
+
 body {
  
   background: #fff;
@@ -57,6 +63,11 @@ body {
   -webkit-animation-delay: 0.4166666667s;
           animation-delay: 0.4166666667s;
   color: #ea4335;
+}
+.letter:nth-child(7) {
+  -webkit-animation-delay: 0.4166666667s;
+          animation-delay: 0.4166666667s;
+  color: #4135ea8e;
 }
 
 @-webkit-keyframes bounce {

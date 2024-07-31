@@ -16,7 +16,7 @@ body.day-mode {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('./day.jpg');
+  background-image: url('./public/day.jpg');
   background-position: center;
 
   background-size: cover;
@@ -32,7 +32,7 @@ body.night-mode {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('./night.jpg');
+  background-image: url('./public/night.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -126,12 +126,7 @@ span.flag {
 }
 
 
-.list_digimoonsavg {
 
-  /*background-color:  #d474f7bd;*/
-  background-image: url(https://primefaces.org/cdn/primereact/images/dock/window.jpg);
-
-}
 
 .st0 {
   fill: #66AF4C;
