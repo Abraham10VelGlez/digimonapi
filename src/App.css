@@ -16,7 +16,7 @@ body.day-mode {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('./public/day.jpg');
+  background-image: url('/images/day.jpg');
   background-position: center;
 
   background-size: cover;
@@ -32,7 +32,7 @@ body.night-mode {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('./public/night.jpg');
+  background-image: url('/images/night.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
