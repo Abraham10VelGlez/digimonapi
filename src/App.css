@@ -33,7 +33,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('https://primefaces.org/cdn/primereact/images/dock/window.jpg');
+  /*background-image: url('https://primefaces.org/cdn/primereact/images/dock/window.jpg');*/
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

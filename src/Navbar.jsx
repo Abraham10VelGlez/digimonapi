@@ -127,15 +127,14 @@ export default function Navbar() {
 
             <div className="dock-window" >
                 <Dock model={items} position={position} />
-                <Dialog visible={displayTerminal} breakpoints={{ '560px': '200px', '100px': '25vw' }} style={{ width: '20vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={displayTerminal_window}>
-                    <Terminal welcomeMessage="(Hacking Digimon Terminal)" prompt="primereactavg $" />
-                    {/*Welcome to PrimeReact by AbrahamVG  */}
+                <Dialog visible={displayTerminal} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={false}>
+                    <Terminal prompt="primereact $" />
                 </Dialog>
-                <Dialog visible={displayFinder} breakpoints={{ '560px': 'auto', '300px': '75vw' }} style={{ width: '18vw', height: '18rem' }} onHide={() => setDisplayFinder(false)} >
+                <Dialog visible={displayFinder} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '18vw', height: '18rem' }} onHide={() => setDisplayFinder(false)} >
                     <h2 className="text-center">Cambiando Tema de DigimonDex</h2>
                     <Climax></Climax>
                 </Dialog>
-                <Dialog visible={displaySearch} breakpoints={{ '960px': 'auto', '300px': '25vw' }} style={{ width: '20vw', height: '45rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
+                <Dialog visible={displaySearch} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '20vw', height: '40rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
                     <h2 className="text-center">Buscar Digimon</h2>
                     <Search></Search>
                 </Dialog>

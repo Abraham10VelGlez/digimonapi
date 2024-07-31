@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate, Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Cardall from './Cardall';
+import List_n from './List_n';
 
 
 export default function Menu() {
@@ -44,11 +45,8 @@ function Home() {
 
 function Viewall() {
     return (
-        <div className="list_digimoonsavg" >
-            <h2 className="text-center">Digimon World</h2>
-            <Cardall></Cardall>
-
-        </div>);
+       <List_n></List_n>
+    );
 }
 
 
