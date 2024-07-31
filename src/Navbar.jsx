@@ -63,8 +63,8 @@ export default function Navbar() {
             label: 'Photos',
             icon: () => <img alt="Photos" src="https://primefaces.org/cdn/primereact/images/dock/photos.svg" width="60%" />,
             command: () => {
-                //window.open('/digimonsavg', '_blank')
-                window.location.href = '/digimonsavg';
+                window.open('/digimonsavg', '_blank')
+                //window.location.href = '/digimonsavg';
                 //setDisplayAll(true);
             }
 
@@ -125,26 +125,27 @@ export default function Navbar() {
                 })}
             </div>*/}
 
-            <div className="dock-window" style={{ backgroundImage: 'url(https://primefaces.org/cdn/primereact/images/dock/window.jpg)' }}>
+            <div className="dock-window" >
                 <Dock model={items} position={position} />
-                <Dialog visible={displayTerminal} breakpoints={{ 'auto': 'auto', '600px': '25vw' }} style={{ width: '20vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={displayTerminal_window}>
-                    <Terminal welcomeMessage="Welcome to PrimeReact by AbrahamVG (Hacking Digimon Terminal)" prompt="primereactavg $" />
+                <Dialog visible={displayTerminal} breakpoints={{ '560px': '200px', '100px': '25vw' }} style={{ width: '20vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={displayTerminal_window}>
+                    <Terminal welcomeMessage="(Hacking Digimon Terminal)" prompt="primereactavg $" />
+                    {/*Welcome to PrimeReact by AbrahamVG  */}
                 </Dialog>
-                <Dialog visible={displayFinder} breakpoints={{ '960px': 'auto', '600px': '75vw' }} style={{ width: '18vw', height: '18rem' }} onHide={() => setDisplayFinder(false)} >
+                <Dialog visible={displayFinder} breakpoints={{ '560px': 'auto', '300px': '75vw' }} style={{ width: '18vw', height: '18rem' }} onHide={() => setDisplayFinder(false)} >
                     <h2 className="text-center">Cambiando Tema de DigimonDex</h2>
                     <Climax></Climax>
                 </Dialog>
-                <Dialog visible={displaySearch} breakpoints={{ '960px': 'auto', '600px': '75vw' }} style={{ width: '25vw', height: '35rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
+                <Dialog visible={displaySearch} breakpoints={{ '960px': 'auto', '300px': '25vw' }} style={{ width: '20vw', height: '45rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
                     <h2 className="text-center">Buscar Digimon</h2>
                     <Search></Search>
                 </Dialog>
-                <Dialog visible={displayAll} breakpoints={{ '960px': 'auto', '600px': '75vw' }} style={{ width: '50vw' }} onHide={() => setDisplayAll(false)} maximizable blockScroll={true}>
+                {/*<Dialog visible={displayAll} breakpoints={{ '960px': 'auto', '600px': '75vw' }} style={{ width: '50vw' }} onHide={() => setDisplayAll(false)} maximizable blockScroll={true}>
                 <h2 className="text-center">Digimon World</h2>                    
                     <a href="/digimonsavg" target="_blank" rel="noopener noreferrer" className="p-button font-bold" >
                     VER TODO EL CATALOGO ENTERO
                     </a>
                     <Cardall></Cardall>
-                </Dialog>
+                </Dialog>*/}
             </div>
         </div>
     )
