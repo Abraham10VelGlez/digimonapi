@@ -1,17 +1,13 @@
 .list_digimoonsavg {
 
-  background-color:  #000000fa;
-  /*background-image: url(https://primefaces.org/cdn/primereact/images/dock/window.jpg);*/
-
-}
-
-body {
+  
+  
+  background-image: url('/images/day.jpg');
  
-  background: #fff;
-
 }
 
 .bounce {
+  /*background-color:  #2fffbafa;*/
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;

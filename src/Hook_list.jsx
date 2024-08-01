@@ -44,8 +44,16 @@ export default function Hook_list() {
     console.log("activacion de mas digimon");
     const { resultx } = await getDigimosListpageSize(siguienteurl)    
     setdigimonspages(prev => [...prev, ...resultx.data.content]) //leer el estado previo
-    resultx.data.pageable.nextPage == null && setmoredigi(false)
-    seturl(resultx.data.pageable.nextPage)
+    //console.log(resultx.data.pageable.nextPage.length);
+    if(resultx.data.pageable.nextPage.length == 0){
+      setmoredigi(false)
+    }else{
+      setmoredigi(true)
+      seturl(resultx.data.pageable.nextPage)
+    }
+    //resultx.data.pageable.nextPage === null && setmoredigi(false)
+    
+    
 
   }
 

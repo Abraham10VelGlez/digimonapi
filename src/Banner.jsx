@@ -6,7 +6,7 @@ export default function Banner() {
 
 
     return (
-        <>
+        <div>
             <div className="bounce">
                 
                 <span className="letter">W</span>
@@ -25,7 +25,7 @@ export default function Banner() {
                 <span className="letter">o</span>
                 <span className="letter">n</span>
             </div>
-        </>
+        </div>
 
     )
 }

@@ -33,18 +33,18 @@ export default function Cardall() {
 
 
     return (
-        <div className="gridxavgajust grid " >
+        <div className="gridxavgajust grid  list_digimoonsavg" >
 
 
             <InfiniteScroll
                 dataLength={monster.length} //This is important field to render the next data
                 next={masDigimons}
-                hasMore={true}
+                hasMore={moredigi}
                 loader={<h4>Loading...</h4>}
                 endMessage={
-                    <p style={{ textAlign: 'center' }}>
-                        <b>Yay! You have seen it all</b>
-                    </p>
+                    <div class="col-12 md:col-6 lg:col-12">
+                        <center><b>ESTA ES LA LISTA TOTAL DE WORLD DIGIMON</b></center>
+                    </div>
                 }
                 className="gridxavgajust grid "
             >

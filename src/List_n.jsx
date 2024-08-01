@@ -8,7 +8,7 @@ export default function List_n() {
 
 
     return (
-        <div className="list_digimoonsavg" >
+        <div className="" >
             <br></br>
             <br></br>
             <br></br>
