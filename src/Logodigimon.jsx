@@ -1,5 +1,7 @@
 import React from 'react';
 import { Image } from 'primereact/image';
+import { Button } from 'primereact/button';
+import { Card } from 'primereact/card';
 
 export default function Logodigimon() {
 
@@ -11,9 +13,16 @@ export default function Logodigimon() {
 
             <div className="card flex justify-content-center align-items-center">
                 <div className="svg-container">
-                    <Image src="pb-removebg-preview.png" alt="Image" className="centered-image" width="150" height="125" />
 
-                    <svg className="m-logo" shapeRendering="crispEdges" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+
+
+                    <Button className="bg-red-500 hover:bg-blue-500 border-white-500">
+                        <Image src="pb-removebg-preview.png" alt="Image" width="150" height="125" />
+                        {/*className="centered-image" */}
+                    </Button>
+                    
+
+                    {/*<svg className="m-logo" shapeRendering="crispEdges" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
                         <rect className="box wave1 st0" width="50" height="50" />
                         <rect x="50" className="box wave2 st1" width="50" height="50" />
                         <rect x="100" className="box wave3 st2" width="50" height="50" />
@@ -30,7 +39,7 @@ export default function Logodigimon() {
                         <rect x="50" y="150" className="box wave5 st13" width="50" height="50" />
                         <rect x="100" y="150" className="box wave6 st14" width="50" height="50" />
                         <rect x="150" y="150" className="box wave7 st15" width="50" height="50" />
-                    </svg>
+                    </svg>*/}
                 </div>
             </div>
 

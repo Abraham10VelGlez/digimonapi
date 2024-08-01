@@ -21,7 +21,7 @@ body.day-mode {
 
   background-size: cover;
   background-repeat: no-repeat;
-
+  
   color: black;
   opacity: 1;
 }
@@ -212,7 +212,7 @@ span.flag {
 }
 
 .centered-image {
-  position: absolute;
+  /*position: absolute;*/ /*este funcionamiento sirve con el uso del svg*/
   top: 50%;
   left: 25%;
   transform: translate(-50%, -50%);

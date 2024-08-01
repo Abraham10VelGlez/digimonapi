@@ -8,7 +8,7 @@ export default function List_n() {
 
 
     return (
-        <div className="" >
+        <div  >
             <br></br>
             <br></br>
             <br></br>
