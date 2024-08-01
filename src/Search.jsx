@@ -296,7 +296,7 @@ export default function Search() {
         <div className="justify-content-center">
 
             <div className="grid">
-                <div className="col-12 md:col-6 lg:col-12">
+                <div className="col-12 md:col-12 lg:col-12">
                     <div className="text-center p-3 border-round-sm font-bold">
                         <AutoComplete field="name" value={selectedCountry} suggestions={filteredCountries} completeMethod={search} onChange={(e) => setSelectedCountry(e.value)} />
                         {
@@ -309,7 +309,7 @@ export default function Search() {
 
             <div className="grid">
 
-                <div className="col-12 md:col-6 lg:col-12">
+                <div className="col-12 md:col-12 lg:col-12">
                     <div className="text-center p-3 border-round-sm  font-bold">
                         <div className="card">
                             <Cardselect json={digimonDetails} ></Cardselect>

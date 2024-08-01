@@ -6,7 +6,7 @@ import Hook_list from './Hook_list';
 import Cardx2 from './Card_x2';
 import { Skeleton } from 'primereact/skeleton'; // Si estás usando PrimeReact para el Skeleton
 import InfiniteScroll from 'react-infinite-scroll-component';
-
+import Cookies from 'js-cookie';
 
 export default function Cardall() {
 
@@ -20,6 +20,7 @@ export default function Cardall() {
             setmonster(digimonspages);
             setLoading(false);
         }
+        //validacionclim()
         //console.log(digimons);
     }, [digimonspages]);
 
@@ -30,6 +31,12 @@ export default function Cardall() {
             </div>
         </div>
     );
+
+    const validacionclim = () => {
+        const cookieValuex = Cookies.get('themeChecked');
+        document.body.className = cookieValuex ? 'night-mode' : 'day-mode';
+        
+    }
 
 
     return (

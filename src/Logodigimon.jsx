@@ -2,6 +2,7 @@ import React from 'react';
 import { Image } from 'primereact/image';
 import { Button } from 'primereact/button';
 import { Card } from 'primereact/card';
+import { Skeleton } from 'primereact/skeleton'; // Si estás usando PrimeReact para el Skeleton
 
 export default function Logodigimon() {
 
@@ -16,11 +17,12 @@ export default function Logodigimon() {
 
 
 
-                    <Button className="bg-red-500 hover:bg-blue-500 border-white-500">
+                    <Button className="border-round-lg cardcolos hover:bg-pink-500 border-white-500">
                         <Image src="pb-removebg-preview.png" alt="Image" width="150" height="125" />
                         {/*className="centered-image" */}
                     </Button>
-                    
+
+
 
                     {/*<svg className="m-logo" shapeRendering="crispEdges" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
                         <rect className="box wave1 st0" width="50" height="50" />

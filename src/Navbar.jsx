@@ -20,7 +20,7 @@ import Cardselect from './Cardselect';
 import Cardall from './Cardall';
 import Logodigimon from './Logodigimon';
 import { Button } from 'primereact/button';
-
+import Cookies from 'js-cookie';
 
 
 export default function Navbar() {
@@ -96,9 +96,14 @@ export default function Navbar() {
 
 
     const [themeChecked, setThemeChecked] = useState(false);
+
     useEffect(() => {
         // Cambiar la clase del body según el estado del botón
-        document.body.className = themeChecked  ? 'night-mode' : 'day-mode';
+        
+        console.log(themeChecked);
+        document.body.className = themeChecked ? 'night-mode' : 'day-mode';
+        Cookies.set('climaXavg', themeChecked, { expires: 1 }); // expira en 1 día
+        //console.log(climaxavgc);
     }, [themeChecked]);
 
 
@@ -136,13 +141,13 @@ export default function Navbar() {
                 {/*<Dialog visible={displayTerminal} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '30vw' }} onHide={() => setDisplayTerminal(false)} maximizable blockScroll={false}>
                     <Terminal prompt="primereact $" />
                 </Dialog>*/}
-                <Dialog visible={displayFinder} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '18vw', height: '18rem' }} onHide={() => setDisplayFinder(false)} >
+                <Dialog className="border-round-lg cardcolos" visible={displayFinder} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '18vw', height: '18rem' }} onHide={() => setDisplayFinder(false)} >
                     <h2 className="text-center">Cambiando Tema de DigimonDex</h2>
                     <Climax
                         checked={themeChecked}
                         onChange={setThemeChecked} ></Climax>
                 </Dialog>
-                <Dialog visible={displaySearch} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '20vw', height: '40rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
+                <Dialog className="border-round-lg cardcolos" visible={displaySearch} breakpoints={{ '960px': '50vw', '600px': '75vw' }} style={{ width: '20vw', height: '40rem' }} onHide={() => setDisplaySearch(false)} maximizable blockScroll={false}>
                     <h2 className="text-center">Buscar Digimon</h2>
                     <Search></Search>
                 </Dialog>
